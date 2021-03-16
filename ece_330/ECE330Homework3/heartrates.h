@@ -10,7 +10,7 @@ using namespace std;
 class HeartRates
 {
 	public:
-		HeartRates(const string & = "", const string & = "", const int = 0, const int = 0,  const int = 0);	//constructor
+		HeartRates(const string & = "", const string & = "", const int = 0, const int = 0,  const int = 0, const int = 0, const int = 0, const int = 0);	//constructor
 		void setFirstName (const string &);		//set first name
 		string getFirstName () const;			//get first name
 		void setLastName (const string &);		//set last name
@@ -22,6 +22,12 @@ class HeartRates
 		void setBirthYear (const int);			//set year person was born
 		int getBirthYear () const;			//get year person was born
 		int getAge() const;				//get age from birthdate
+		void setPresentMonth (const int);
+		int getPresentMonth () const;
+		void setPresentDay (const int);
+		int getPresentDay () const;
+		void setPresentYear (const int);
+		int getPresentYear () const;
 		int getMaximumHeartRate() const;		//get maximum heart rate from age
 		void getTargetHeartRate() const;		//get target heart rate from maximum heart rate
 	private:
@@ -30,6 +36,9 @@ class HeartRates
 		int birthMonth;			//User birth month
 		int birthDay;			//User birthday
 		int birthYear;			//User birth year
+		int presentDay;
+		int presentMonth;
+		int presentYear;
 };
 
 #endif

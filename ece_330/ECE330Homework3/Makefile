@@ -5,7 +5,7 @@ test.o: test.cpp
 	g++ -c test.cpp
 
 heartrates.o: heartrates.cpp heartrates.h
-	g++ -c heartrates.cpp
+	gcc -c heartrates.cpp
 
 clean:
 	rm *.o output

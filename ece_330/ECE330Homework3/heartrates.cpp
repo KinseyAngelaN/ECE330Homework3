@@ -6,13 +6,16 @@
 
 using namespace std;
 
-HeartRates::HeartRates(const string &first, const string &last, int month, int day, int year)	//constructor
+HeartRates::HeartRates(const string &first, const string &last, int month, int day, int year, int pm, int pd, int py)	//constructor
 {
 	yourFirstName = first;
 	yourLastName = last;
 	birthMonth = month;
 	birthDay = day;
 	birthYear = year;
+	presentMonth = pm;
+	presentDay = pd;
+	presentYear = py;
 }
 
 void HeartRates::setFirstName (const string &first)		//set first name
@@ -65,24 +68,55 @@ int  HeartRates::getBirthYear () const			//get year person was born
 	return birthYear;
 }
 
+void  HeartRates::setPresentMonth (const int pm)		//set present month
+{
+	presentMonth = pm;
+}
+
+int HeartRates::getPresentMonth () const			//get present month
+{
+	return presentMonth;
+}
+
+void  HeartRates::setPresentDay (const int pd)		//set present day
+{
+	presentDay = pd;
+}
+
+int  HeartRates::getPresentDay () const			//get present day
+{
+	return presentDay;
+}
+
+void  HeartRates::setPresentYear (const int py)		//set present year
+{
+	presentYear = py;
+}
+
+int  HeartRates::getPresentYear () const			//get present year
+{
+	return presentYear;
+}
+
+
 int  HeartRates::getAge() const				//get age from birthdate
 {
-	int pm, pd, py, bm, bd, by, cy;
+	int pm1, pd1, py1, bm, bd, by, cy;
 	bm = getBirthMonth();
 	bd = getBirthDay();
 	by = getBirthYear();
-	cout << "Enter present date in the format mm dd yyyy: ";
-	cin >> pm >> pd >> py;
+	pm1 = getPresentMonth();
+	pd1 = getPresentDay();
+	py1 = getPresentYear();
 
-
-	if (bd > pd){
-		pm = pm - 1;
+	if (bd > pd1){
+		pm1 = pm1 - 1;
 	}
-	if (bm > pm){
-		py = py - 1;
+	if (bm > pm1){
+		py1 = py1 - 1;
 	}
 
-	cy = py - by;
+	cy = py1 - by;
 
 	return cy;
 }
@@ -101,8 +135,8 @@ void  HeartRates::getTargetHeartRate() const			//get target heart rate from maxi
 	int mint, maxt, mr;
 
 	mr = getMaximumHeartRate();
-	mint = .5 * mint;
-	maxt = .85 * maxt;
+	mint = .5 * mr;
+	maxt = .85 * mr;
 
-	cout << mint << " - " << maxt;
+	cout << mint << " - " << maxt << "\n";
 }

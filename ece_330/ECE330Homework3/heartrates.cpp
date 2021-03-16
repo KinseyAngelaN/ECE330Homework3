@@ -6,7 +6,7 @@
 
 using namespace std;
 
-HeartRates::HeartRates(const string &first, const string &last, int month, int = day, int = year)	//constructor
+HeartRates::HeartRates(const string &first, const string &last, int month, int day, int year)	//constructor
 {
 	yourFirstName = first;
 	yourLastName = last;
@@ -15,57 +15,57 @@ HeartRates::HeartRates(const string &first, const string &last, int month, int =
 	birthYear = year;
 }
 
-void setFirstName (const string &first)		//set first name
+void HeartRates::setFirstName (const string &first)		//set first name
 {
 	yourFirstName = first;
 }
 
-string getFirstName () const			//get first name
+string HeartRates::getFirstName () const			//get first name
 {
 	return yourFirstName;
 }
 
-void setLastName (const string &last)		//set last name
+void HeartRates:: setLastName (const string &last)		//set last name
 {
 	yourLastName = last;
 }
 
-string getLastName () const			//get last name
+string HeartRates::getLastName () const			//get last name
 {
 	return yourLastName;
 }
 
-void setBirthMonth (const int month)		//set month person was born
+void  HeartRates::setBirthMonth (const int month)		//set month person was born
 {
 	birthMonth = month;
 }
 
-int getBirthMonth () const			//get month person was born
+int HeartRates::getBirthMonth () const			//get month person was born
 {
 	return birthMonth;
 }
 
-void setBirthDay (const int day)		//set day person was born
+void  HeartRates::setBirthDay (const int day)		//set day person was born
 {
 	birthDay = day;
 }
 
-int getBirthDay () const			//get day person was born
+int  HeartRates::getBirthDay () const			//get day person was born
 {
 	return birthDay;
 }
 
-void setBirthYear (const int year)		//set year person was born
+void  HeartRates::setBirthYear (const int year)		//set year person was born
 {
 	birthYear = year;
 }
 
-int getBirthYear () const			//get year person was born
+int  HeartRates::getBirthYear () const			//get year person was born
 {
 	return birthYear;
 }
 
-int getAge() const				//get age from birthdate
+int  HeartRates::getAge() const				//get age from birthdate
 {
 	int pm, pd, py, bm, bd, by, cy;
 	bm = getBirthMonth();
@@ -87,7 +87,7 @@ int getAge() const				//get age from birthdate
 	return cy;
 }
 
-int getMaximumHeartRate() const		//get maximum heart rate from age
+int HeartRates::getMaximumHeartRate() const		//get maximum heart rate from age
 {
 	int mr, a;
 	a = getAge();
@@ -96,7 +96,7 @@ int getMaximumHeartRate() const		//get maximum heart rate from age
 	return mr;
 }
 
-void getTargetHeartRate() const			//get target heart rate from maximum heart rate
+void  HeartRates::getTargetHeartRate() const			//get target heart rate from maximum heart rate
 {
 	int mint, maxt, mr;
 

@@ -1,7 +1,7 @@
 /* heartrates.h  */
 
-#ifndef HeartRates
-#define HeartRates
+#ifndef HEARTRATES_H
+#define HEARTRATES_H
 
 #include <string>
 
@@ -10,7 +10,7 @@ using namespace std;
 class HeartRates
 {
 	public:
-		HeartRates(string & = "", string & = "", int = 0, int = 0, int = 0);	//constructor
+		HeartRates(const string & = "", const string & = "", const int = 0, const int = 0,  const int = 0);	//constructor
 		void setFirstName (const string &);		//set first name
 		string getFirstName () const;			//get first name
 		void setLastName (const string &);		//set last name
